@@ -1,7 +1,7 @@
 
 import pandas as pd
 import numpy as np
-import plotly.express as px
+
 import streamlit as st
 
 excel_file = 'ListDesestimiento.xlsx'
