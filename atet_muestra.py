@@ -11,19 +11,26 @@ st.header = ('holas')
 st.write('Hello world!')
 
 
-st.subheader("Define a custom colorscale")
-df = px.data.iris()
-fig = px.scatter(
-    df,
-    x="sepal_width",
-    y="sepal_length",
-    color="sepal_length",
-    color_continuous_scale="reds",
-)
+@st.experimental_memo
+def get_chart_37893177():
+    import plotly.graph_objects as go
+    import pandas as pd
 
-tab1, tab2 = st.tabs(["Streamlit theme (default)", "Plotly native theme"])
-with tab1:
-    st.plotly_chart(fig, theme="streamlit", use_container_width=True)
-with tab2:
-    st.plotly_chart(fig, theme=None, use_container_width=True)
+    df = pd.read_csv('https://raw.githubusercontent.com/plotly/datasets/master/2014_usa_states.csv')
+
+    fig = go.Figure(data=[go.Table(
+        header=dict(values=list(df.columns),
+                    fill_color='paleturquoise',
+                    align='left'),
+        cells=dict(values=[df.Rank, df.State, df.Postal, df.Population],
+                   fill_color='lavender',
+                   align='left'))
+    ])
+
+
+    tab1, tab2 = st.tabs(["Streamlit theme (default)", "Plotly native theme"])
+    with tab1:
+        st.plotly_chart(fig, theme="streamlit")
+    with tab2:
+        st.plotly_chart(fig, theme=None)
 
