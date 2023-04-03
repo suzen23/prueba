@@ -10,4 +10,7 @@ import pandas as pd
 st.header = ('holas')
 st.write('Hello world!')
 
+for (i=0, i<7,i++)
+
+print (i)
 
