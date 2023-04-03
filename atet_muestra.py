@@ -10,7 +10,9 @@ import pandas as pd
 st.header = ('holas')
 st.write('Hello world!')
 
-for (i=0, i<7,i++)
+num1 =10
+num2= 20
 
-print (i)
+sum = num1+num2
 
+print (sum)
