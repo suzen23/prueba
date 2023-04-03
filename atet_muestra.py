@@ -2,37 +2,29 @@ import numpy as np
 import streamlit as st
 import time
 import pandas as pd
-import plotly.graph_objects as go
-
-
-
+from io import StringIO
 
 #testing 1
 st.header = ('holas')
 st.write('Hello world!')
 
 
-@st.experimental_memo
-def get_chart_37893177():
-    import plotly.graph_objects as go
-    import pandas as pd
-
-    #df = pd.read_csv('https://raw.githubusercontent.com/plotly/datasets/master/2014_usa_states.csv')
-    df = pd.read_csv('https://github.com/suzen23/prueba/ListDesestimiento1.csv')
-
-    fig = go.Figure(data=[go.Table(
-        header=dict(values=list(df.columns),
-                    fill_color='paleturquoise',
-                    align='left'),
-        cells=dict(values=[df.NUMERO,df.NOMBRES, df.MOTIVO],
-                   fill_color='lavender',
-                   align='left'))
-    ])
 
 
-    tab1, tab2 = st.tabs(["Streamlit theme (default)", "Plotly native theme"])
-    with tab1:
-        st.plotly_chart(fig, theme="streamlit")
-    with tab2:
-        st.plotly_chart(fig, theme=None)
+uploaded_file = st.file_uploader("Choose a file")
+if uploaded_file is not None:
+    # To read file as bytes:
+    bytes_data = uploaded_file.getvalue()
+    st.write(bytes_data)
 
+    # To convert to a string based IO:
+    stringio = StringIO(uploaded_file.getvalue().decode("utf-8"))
+    st.write(stringio)
+
+    # To read file as string:
+    string_data = stringio.read()
+    st.write(string_data)
+
+    # Can be used wherever a "file-like" object is accepted:
+    dataframe = pd.read_csv(uploaded_file)
+    st.write(dataframe)
