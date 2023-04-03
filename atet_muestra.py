@@ -16,7 +16,8 @@ def get_chart_37893177():
     import plotly.graph_objects as go
     import pandas as pd
 
-    df = pd.read_csv('https://raw.githubusercontent.com/plotly/datasets/master/2014_usa_states.csv')
+    #df = pd.read_csv('https://raw.githubusercontent.com/plotly/datasets/master/2014_usa_states.csv')
+    df = pd.read_csv('https://github.com/suzen23/prueba/ListDesestimiento1.csv')
 
     fig = go.Figure(data=[go.Table(
         header=dict(values=list(df.columns),
