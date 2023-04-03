@@ -23,7 +23,7 @@ def get_chart_37893177():
         header=dict(values=list(df.columns),
                     fill_color='paleturquoise',
                     align='left'),
-        cells=dict(values=[df.Rank, df.State, df.Postal, df.Population],
+        cells=dict(values=[df.NOMBRES, df.MOTIVO],
                    fill_color='lavender',
                    align='left'))
     ])
