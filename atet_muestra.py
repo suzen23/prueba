@@ -2,7 +2,6 @@ import numpy as np
 import streamlit as st
 import time
 import pandas as pd
-from st_aggrid import AgGrid
 
 
 
