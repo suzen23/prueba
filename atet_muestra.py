@@ -28,8 +28,10 @@ st.title('DESESTIMIENTOS ATET')
 
 DATA_URL = ('https://github.com/suzen23/prueba/ListDesestimiento1.csv')
 
+####
 
+df = pd.read_csv('ListDesestimiento1.csv')
 
-
+print(df.to_string()) 
 
 
