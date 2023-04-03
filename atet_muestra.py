@@ -1,7 +1,7 @@
 
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
+import streamlit as st
 
 excel_file = 'ListDesestimiento.xlsx'
 sheet_name='DATA'
