@@ -20,7 +20,7 @@ st.write('Hello world!')
 
 num1 =st.number_input('Introduzac un numero:')
 
-st.write('El numero al cuadrado es ')
+st.write('El numero al cuadrado es ', num**2)
 
 
 
