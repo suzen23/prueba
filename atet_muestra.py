@@ -4,6 +4,13 @@ import time
 import pandas as pd
 import time
 
+st.markdown("# Main page 🎈")
+st.sidebar.markdown("# Main page 🎈")
+st.markdown("# Page 2 ❄️")
+st.sidebar.markdown("# Page 2 ❄️")
+st.markdown("# Page 3 🎉")
+st.sidebar.markdown("# Page 3 🎉")
+
 
 #testing 1
 st.header = ('holas')
