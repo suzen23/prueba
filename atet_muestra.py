@@ -11,17 +11,17 @@ st.sidebar.markdown("# Page 2 ❄️")
 st.markdown("# Page 3 🎉")
 st.sidebar.markdown("# Page 3 🎉")
 
+streamlit run main_page.py
+
 
 #testing 1
 st.header = ('holas')
 st.write('Hello world!')
 
-num1 =10
-num2= 20
+num1 =st.number_input('Introduzac un numero:')
 
-sum = num1+num2
+st.write('El numero al cuadrado es ')
 
-print (sum)
 
 
 
