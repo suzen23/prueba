@@ -16,7 +16,7 @@ st.sidebar.markdown("# Page 3 🎉")
 
 #testing 1
 st.header = ('holas')
-st.write('Hello world!')
+st.write('Hello Wesley!')
 
 num1 =st.number_input('Introduzac un numero:')
 
