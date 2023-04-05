@@ -11,7 +11,7 @@ st.sidebar.markdown("# Page 2 ❄️")
 st.markdown("# Page 3 🎉")
 st.sidebar.markdown("# Page 3 🎉")
 
-streamlit run main_page.py
+
 
 
 #testing 1
