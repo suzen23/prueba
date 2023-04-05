@@ -2,7 +2,6 @@ import numpy as np
 import streamlit as st
 import time
 import pandas as pd
-streamlit run atet_muestra.py
 import time
 
 
